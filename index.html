@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Валентинка ❤️</title>
+    <style>
+      <img src="https://pin.it/5qRH4LBhY.gif" alt="<3" width="300">
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #ffccd5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        #yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+        #no {
+            background-color: #6c757d;
+            color: white;
+            position: absolute;
+        }
+        .hearts {
+            position: absolute;
+            font-size: 30px;
+            color: red;
+            animation: float 2s linear infinite;
+        }
+        @keyframes float {
+            0% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-100px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Будешь моей валентинкой? ❤️</h1>
+    <div class="buttons">
+        <button id="yes">Да</button>
+        <button id="no">Нет</button>
+    </div>
+    <script>
+        const noButton = document.getElementById('no');
+        const yesButton = document.getElementById('yes');
+        const body = document.body;
+
+        noButton.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noButton.clientWidth);
+            const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+       yesButton.addEventListener('click', () => {
+    const message = document.createElement('h2');
+    message.textContent = 'ЮХУУУУ!! ❤️';
+    message.style.color = '#d63384';
+    body.appendChild(message);
+
+    const img = document.createElement('img');
+    img.src = 'https://pin.it/5ArJNJcfV.gif'; 
+    img.width = 300;
+    img.style.marginTop = '20px';
+    body.appendChild(img);
+                
+                setTimeout(() => { heart.remove(); }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>
